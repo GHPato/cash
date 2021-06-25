@@ -1,0 +1,31 @@
+-- USERS
+INSERT INTO users VALUES (1, 'test@app.com.ar', 'Pepe', 'Argento');
+INSERT INTO users VALUES (2, 'test2@app.com.ar', 'Moni', 'Argento');
+INSERT INTO users VALUES (3, 'test3@app.com.ar', 'Coqui', 'Argento');
+INSERT INTO users VALUES (4, 'test4@app.com.ar', 'Bart', 'Simpson');
+INSERT INTO users VALUES (6, 'test5@app.com.ar', 'Dice', 'Simon');
+INSERT INTO users VALUES (7, 'test5@app.com.ar', 'Roberto', 'Palacio');
+INSERT INTO users VALUES (8, 'test5@app.com.ar', 'Joaquin', 'De la Vega');
+INSERT INTO users VALUES (9, 'test5@app.com.ar', 'Martin', 'Gonzales');
+INSERT INTO users VALUES (10, 'test5@app.com.ar', 'Fernando', 'Galpon');
+
+
+-- LOANS
+
+INSERT INTO loans VALUES (1, 2500.00, 1);
+INSERT INTO loans VALUES (2, 65120.75, 1);
+INSERT INTO loans VALUES (3, 355.25, 2);
+INSERT INTO loans VALUES (4, 8740.10, 4);
+INSERT INTO loans VALUES (5, 3703.30, 7);
+INSERT INTO loans VALUES (6, 7250.10, 4);
+INSERT INTO loans VALUES (7, 9852.50, 7);
+INSERT INTO loans VALUES (8, 825.00, 9);
+INSERT INTO loans VALUES (9, 94550.00, 8);
+INSERT INTO loans VALUES (10, 17550.55, 11);
+INSERT INTO loans VALUES (11, 3752.25, 10);
+INSERT INTO loans VALUES (12, 1050.25, 6);
+INSERT INTO loans VALUES (13, 87525.55, 10);
+
+-- SE REINICIAN LAS SECUENCIAS SEGÚN LOS DATOS INICIALES
+SELECT setval('public.users_id_seq', 9, true);
+SELECT setval('public.loans_id_seq', 13, true);
