@@ -1,0 +1,24 @@
+-- -------------------------------------
+-- Table "USERS"
+-- -------------------------------------
+CREATE TABLE USERS (
+"id" SERIAL NOT NULL,
+"email" VARCHAR(70) NULL,
+"first_name" VARCHAR(40) NULL,
+"last_name" VARCHAR (100) NULL,
+PRIMARY KEY ("id"));
+
+
+-- -------------------------------------
+-- Table "LOANS"
+-- -------------------------------------
+CREATE TABLE LOANS (
+"id" SERIAL NOT NULL,
+"total" DECIMAL(16,2) NULL,
+"user_id" INT NOT NULL,
+PRIMARY KEY ("id"),
+CONSTRAINT "fk_LOANS_USERS1"
+ FOREIGN KEY("user_id")
+ REFERENCES USERS ("id")
+ ON DELETE CASCADE
+ ON UPDATE NO ACTION);
